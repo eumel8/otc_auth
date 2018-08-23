@@ -12,13 +12,13 @@ python:
 env:
   - ANSIBLE_VERSION=latest
   - ANSIBLE_VERSION=2.4.3.0
-  - ANSIBLE_VERSION=2.5.0
-  - ANSIBLE_VERSION=2.5.2
+  - ANSIBLE_VERSION=2.4.6.0
+  - ANSIBLE_VERSION=2.5.8
+  - ANSIBLE_VERSION=2.6.0
 
 branches:
   only:
     - master
-    - dev
 
 # before_install:
 #   - sudo apt-get update -qq
@@ -33,4 +33,4 @@ script:
   - find . -name "*.yml" | xargs ansible-lint
 
   # Run the role/playbook with ansible-playbook.
-  # - tests/tests.sh
+  - tests/tests.sh
