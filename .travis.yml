@@ -35,5 +35,5 @@ script:
 
   # Run the role/playbook with ansible-playbook.
   - cd tests
-  - ./install-roles.sh
+  - ./install_roles.sh
   - ./test.sh
