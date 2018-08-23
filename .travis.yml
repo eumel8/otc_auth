@@ -19,6 +19,7 @@ env:
 branches:
   only:
     - master
+    - travis
 
 # before_install:
 #   - sudo apt-get update -qq
@@ -34,5 +35,5 @@ script:
 
   # Run the role/playbook with ansible-playbook.
   - ls 
-  - cd tests; ./install-roles.sh
-  - cd tests; ./test.sh
+  - cd tests && install-roles.sh
+  - cd tests && test.sh
