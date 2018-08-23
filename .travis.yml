@@ -1,5 +1,5 @@
 ---
-sudo: required
+#sudo: required
 dist: xenial
 
 language: python
@@ -25,8 +25,8 @@ branches:
 
 install:
   # Install Ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - pip install ansible-lint jmespath
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible --user; else pip install ansible==$ANSIBLE_VERSION --user; fi
+  - pip install ansible-lint jmespath --user
 
 script:
   # Check the role/playbook's syntax.
