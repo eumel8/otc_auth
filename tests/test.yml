@@ -1,5 +1,12 @@
 ---
 - hosts: localhost
-  remote_user: root
+  gather_facts: no
+
   roles:
-    - otc_auth
+    - role: "otc_auth"
+  tasks:
+  - name: Fail when project name is not set
+    fail:
+      msg: "Cloud project name variable not set (typically: eu-de), instead {{ token.json.token.project.name }}"
+    when:
+     - token.json.token.project.name != 'eu-de'
