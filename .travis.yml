@@ -33,5 +33,5 @@ script:
   - find . -name "*.yml" | xargs ansible-lint
 
   # Run the role/playbook with ansible-playbook.
-  - cd test; ./install-roles.sh
-  - cd test; ./test.sh
+  - cd tests; ./install-roles.sh
+  - cd tests; ./test.sh
