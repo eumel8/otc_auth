@@ -25,8 +25,8 @@ branches:
 
 install:
   # Install Ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible --user; else pip install ansible==$ANSIBLE_VERSION --user; fi
-  - pip install ansible-lint jmespath --user
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - pip install ansible-lint jmespath
 
 script:
   # Check the role/playbook's syntax.
