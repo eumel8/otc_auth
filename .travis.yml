@@ -1,5 +1,4 @@
 ---
-#sudo: required
 dist: xenial
 
 language: python
@@ -19,10 +18,6 @@ env:
 branches:
   only:
     - master
-    - travis
-
-# before_install:
-#   - sudo apt-get update -qq
 
 install:
   # Install Ansible.
