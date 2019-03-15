@@ -2,8 +2,13 @@
     "auth": {
         "identity": {
             "methods": [
+{% if totp is defined %}  
+                "password","totp"
+            ],
+{% else %}  
                 "password"
             ],
+{% endif %}  
             "password": {
                 "user": {
                     "name": "{{ USERNAME }}",
@@ -12,7 +17,17 @@
                         "name": "{{ DOMAIN }}"
                     }
                 }
+{% if totp is defined %}  
+            },
+            "totp": {
+                "user": {
+                    "id": "{{ userid }}",
+                    "passcode": "{{ totp }}"
+                 }
             }
+{% else %}  
+            }
+{% endif %}  
         },
         "scope": {
             "project": {
@@ -21,4 +36,3 @@
         }
     }
 }
-
