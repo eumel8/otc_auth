@@ -14,6 +14,7 @@
     PROJECT_NAME: "{{ PROJECT_NAME }}"
     IAM_AUTH_URL: "https://iam.{{ PROJECT_NAME }}.otc.t-systems.com/v3"
     AUTH_URL_ELB: "https://elb.{{ PROJECT_NAME }}.otc.t-systems.com/v1.0"
+    AUTH_URL_ELBv2: "https://elb.{{ PROJECT_NAME }}.otc.t-systems.com/v2.0"
     AUTH_URL_EVSv1: "https://evs.{{ PROJECT_NAME }}.otc.t-systems.com/v1"
     AUTH_URL_ECS_CLOUD: "https://ecs.{{ PROJECT_NAME }}.otc.t-systems.com/v1"
     AUTH_URL_RDS: "https://rds.{{ PROJECT_NAME }}.otc.t-systems.com"
